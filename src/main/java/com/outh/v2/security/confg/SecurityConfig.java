@@ -90,7 +90,7 @@ class SecurityConfig {
         .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
         // En esta parte el /code/XXX -> El XXX : corresponde al clientId en este caso client-app
         .redirectUri("http://127.0.0.1:8080/login/oauth2/code/client-app")
-        // Esto deberemos de crear un endpoint dentro del cliente para poder obtener el código de AUTHORIZATION_CODE para generar el token
+        // Esto deberemos de crear un endpoint dentro del cliente (SPRING CLOUD GATEWAY) para poder obtener el código de AUTHORIZATION_CODE para generar el token
         .redirectUri("http://127.0.0.1:8080/authorized")
         // Ruta por defecto cuando se haga logout dentro de la web
         .postLogoutRedirectUri("http://127.0.0.1:8080/logout")
